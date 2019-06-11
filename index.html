@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>V.H APPARTMENT GUEST LEDGER
+	<title>GUEST DETAIL</title>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<script type="text/javascript">
+function validation()
+{
+var a = document.form.namefield.value;
+var b = document.form.emailfield.value;
+var c= document.form.numberfield.value;
+var d = document.form.addressfield.value;
+var e = document.form.genderfield.value;
+var f = document.form.flatfield.value;
+if(a=="")
+{
+alert("Please Enter Your Name");
+document.form.name.focus();
+return false;
+}else if(b==""){
+	alert("Please Enter Your email");
+document.form.email.focus();
+}else if(c=="")
+{
+alert("Please Enter Your number");
+document.form.number.focus();
+return false;
+}else if(d==""){
+	alert("Please Enter Your address");
+document.form.address.focus();
+}
+else if(e==""){
+	alert("Please Enter Your gender");
+document.form.gender.focus();
+}
+else if (f=="") {
+	alert("Please Enter Your flat")
+}
+}
+</script>
+	<style type="text/css">
+		head{
+			 font-family: 'Open Sans', sans-serif;
+		}
+
+	body{
+		background-image: url("pic.gif");
+	}
+		.main-box{
+			width: 100%;
+			height: 100%;
+			display: block;
+			margin:auto;
+		}
+		h1{
+			 font-family: 'Open Sans', sans-serif;
+		}
+		 form{
+		 	width: 700px;
+		 	display: block;
+			margin:auto;
+           position: relative;
+           top: 200px;
+           color: black;
+           font-size: 20px;
+           font-family: 'Open Sans', sans-serif;
+		 }
+
+.button {
+  background-color: black;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+		 input{
+		 	color:black;
+		 	border: 1px solid #ccc;
+            padding-left: 10px;
+		 	height: 26px;
+		 }
+		 input[type="radio"]{
+		 	position: relative;
+		 	top: 5px;
+		 }
+		 		 input[type="text"]{
+           font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            border: none;
+		 }
+		 button:focus{
+            border: none;
+
+		 }
+	</style>
+</head>
+<body background="back.jpeg">
+	
+	<h1 style="font-size: 40px;" align="center">GUEST DETAIL</h1>
+
+
+<div class="main-box">
+	<form onsubmit="return validation()" action="insert.php" method="post">
+	<table>
+		<tr>
+			<td>
+				Name:
+			</td>
+			<td>
+				<input type="text" id="namefield" name="namefield">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			    Email:
+			</td>
+			<td>
+				<input type="text" id="emailfield" name="emailfield">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				phone Number:
+			</td>
+			<td>
+				<input type="text" id="numberfield">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Address:
+			</td>
+			<td>
+				<input type="text" id="addressfield" name="addressfield">
+			</td>
+		</tr>
+		<tr>
+			<td>Flat :</td>
+			<td>
+				<input type="text"  id="flatfield" name="flatfield">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Gender:
+			</td>
+			<td>
+				<input type="radio" id="genderfield" value="male" name="genderfield"> Male
+                <input type="radio" id="genderfield" value="female" name="genderfield"> Female
+                <input type="radio" id="genderfield" value="other" name="genderfield"> Other
+			</td>
+		</tr>
+	   <tr>
+			<td>
+			    <button type="submit" class="button" onclick="writedata(addressfield)">SUBMIT</button>
+			</td>
+		</tr>
+
+	</table>
+	</form>
+</div>
+</body>
+</html>
